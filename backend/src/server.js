@@ -6,7 +6,7 @@ const app = express();
 mongoose.connect('mongodb+srv://<teste>:<teste123>@cluster0-hbgnf.mongodb.net/test?retryWrites=true&w=majority'{
     useNewUrlParser: true,
     userUnifiedTopology: true
-})
+});
 
 // visualização da minha aplicação funcionando
 
