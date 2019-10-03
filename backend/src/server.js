@@ -17,6 +17,7 @@ req.params = acessar route params(para edição,delete)
 req.body = acessar corpo da requisição(para criação, edição)
 */
 
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
