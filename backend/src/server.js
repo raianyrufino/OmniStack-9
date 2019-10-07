@@ -1,21 +1,22 @@
-const express = require("express");
-const routes = require('/routes');
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const path = require('path');
+
+const routes = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://<teste>:<teste123>@cluster0-hbgnf.mongodb.net/test?retryWrites=true&w=majority'{
-    useNewUrlParser: true,
-    userUnifiedTopology: true,
+mongoose.connect('mongodb+srv://omnistack:<password>@omnistack-bsste.mongodb.net/semana09?retryWrites=true&w=majority', {
+    useNewUrlParser: true, // Silencia o erro do MongoDB
+    useUnifiedTopology: true, // Silencia o erro do MongoDB
 })
 
-// visualização da minha aplicação funcionando
+// GET, POST, PUT, DELETE
 
-/*
-Métodos
-req.query = acessar query params(para filtros)
-req.params = acessar route params(para edição,delete)
-req.body = acessar corpo da requisição(para criação, edição)
-*/
+// req.query = Acessar query params (para filtros)
+// req.params = Acessar route params (para edição e delete)
+// req.body = Acessar corpo da requisição (para criação e edição)
 
 app.use(cors());
 app.use(express.json());
